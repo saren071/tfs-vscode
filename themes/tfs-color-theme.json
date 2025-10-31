@@ -1,0 +1,64 @@
+{
+  "name": "TextForge Color Theme",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0D0E10",
+    "editor.foreground": "#EAEAEA",
+    "editorLineNumber.foreground": "#50545A",
+    "editorCursor.foreground": "#FFFFFF",
+    "editor.selectionBackground": "#2B2F38",
+    "editor.inactiveSelectionBackground": "#1c1f2500",
+    "editor.lineHighlightBackground": "#111216",
+    "editorWhitespace.foreground": "#2A2E34"
+  },
+  "tokenColors": [
+    {
+      "scope": "keyword.control.directive.tfs",
+      "settings": { "foreground": "#FF6BD8", "fontStyle": "bold" }    // bright pink @colors/@fonts
+    },
+    {
+      "scope": "entity.name.type.component.tfs",
+      "settings": { "foreground": "#4FC3F7", "fontStyle": "bold" }    // bright cyan-blue components
+    },
+    {
+      "scope": "entity.name.state.tfs",
+      "settings": { "foreground": "#FF6BD8", "fontStyle": "bold" }    // states + brackets same pink
+    },
+    {
+      "scope": "support.type.property-name.tfs",
+      "settings": { "foreground": "#9AFF70" }                         // vivid green property names
+    },
+    {
+      "scope": "variable.parameter.property-value.tfs",
+      "settings": { "foreground": "#FFD479" }                         // warm yellowish values
+    },
+    {
+      "scope": "constant.other.color.hex.tfs",
+      "settings": { "foreground": "#A4A4A4" }
+    },
+    {
+      "scope": "support.function.color.tfs",
+      "settings": { "foreground": "#A4A4A4" }
+    },
+    {
+      "scope": "string.quoted.double.tfs",
+      "settings": { "foreground": "#FFB86C" }                         // orange strings
+    },
+    {
+      "scope": "constant.numeric.unit.tfs",
+      "settings": { "foreground": "#7DD3FC" }                         // light blue numbers/units
+    },
+    {
+      "scope": "comment.line.double-slash.tfs",
+      "settings": { "foreground": "#5C6370", "fontStyle": "italic" }
+    },
+    {
+      "scope": "comment.block.tfs",
+      "settings": { "foreground": "#5C6370", "fontStyle": "italic" }
+    },
+    {
+      "scope": "punctuation.bracket.state.tfs",
+      "settings": { "foreground": "#FF6BD8" }                         // ensure bracket and state share tone
+    }
+  ]
+}

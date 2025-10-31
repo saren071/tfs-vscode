@@ -1,0 +1,64 @@
+{
+  "name": "tfs-vscode",
+  "displayName": "TextForge Stylesheet (TFS)",
+  "description": "Syntax highlighting, autocomplete, and live color rendering for .tfs files.",
+  "version": "1.1.0",
+  "publisher": "sarenian71",
+  "repository": { "type": "git", "url": "https://github.com/yourname/tfs-vscode.git" },
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages"],
+  "activationEvents": [
+    "onLanguage:tfs",
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "TextForge Stylesheet (TFS)",
+      "properties": {
+        "tfs.enableColorHighlight": {
+          "type": "boolean",
+          "default": true,
+          "description": "Color the token text itself (e.g., `primary`, `error`). When disabled, only swatches are rendered."
+        },
+        "tfs.brightness.compensation": {
+          "type": "string",
+          "enum": ["auto", "off"],
+          "default": "auto",
+          "description": "When 'auto', dark or low-alpha colors are brightened so they remain readable on dark backgrounds."
+        },
+        "tfs.brightness.minLuminance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.45,
+          "description": "Minimum relative luminance for text coloring when compensation is enabled (0=dark, 1=light)."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "tfs",
+        "aliases": ["TFS", "TextForge Stylesheet"],
+        "extensions": [".tfs"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tfs",
+        "scopeName": "source.tfs",
+        "path": "./syntaxes/tfs.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      { "language": "tfs", "path": "./snippets/tfs-snippets.json" }
+    ]
+  },
+  "devDependencies": {},
+  "license": "MIT",
+  "icon": "icon.png",
+  "scripts": {
+    "package": "vsce package"
+  }
+}

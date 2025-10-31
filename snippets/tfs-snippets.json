@@ -1,0 +1,27 @@
+[
+  { "prefix": "@colors", "body": ["@colors {", "\t${1:name}: ${2:#30aaff};", "}"], "description": "Define color tokens" },
+  {
+    "prefix": "@fonts",
+    "body": ["@fonts {", "\t${1:base}: { size: ${2:14}; weight: ${3:medium}; family: \"${4:JetBrains Mono}\"; };", "}"],
+    "description": "Define font profiles"
+  },
+  {
+    "prefix": "Component",
+    "body": [
+      "${1:ComponentName} {",
+      "\tcolor: ${2:text};",
+      "\tfont: ${3:base};",
+      "}",
+      "",
+      "${1:ComponentName} {",
+      "\t[hover] {",
+      "\t\tcolor: ${4:accent};",
+      "\t\tbackground: ${5:surface-light};",
+      "\t}",
+      "}"
+    ],
+    "description": "Component with hover state"
+  },
+  { "prefix": "[hover]", "body": ["[hover] {", "\t${1:property}: ${2:value};", "}"], "description": "Hover state block" },
+  { "prefix": "prop", "body": ["${1:property-name}: ${2:value};"], "description": "Key/value property pair" }
+]
