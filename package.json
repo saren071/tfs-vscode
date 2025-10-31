@@ -3,7 +3,7 @@
   "displayName": "TextForge Stylesheet (TFS)",
   "description": "Syntax highlighting, autocomplete, and live color rendering for .tfs files.",
   "version": "1.0.0",
-  "publisher": "sarenian71",
+  "publisher": "Textforge",
   "repository": { "type": "git", "url": "https://github.com/saren071/tfs-vscode" },
   "engines": { "vscode": "^1.80.0" },
   "categories": ["Programming Languages"],
